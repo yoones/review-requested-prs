@@ -1,0 +1,13 @@
+{
+  "name": "yoones",
+  "owner": {
+    "name": "Younes SERRAJ"
+  },
+  "plugins": [
+    {
+      "name": "review-requested-prs",
+      "source": "./",
+      "description": "Review the open PRs awaiting your requested review and leave pending feedback you finish on the GitHub UI."
+    }
+  ]
+}

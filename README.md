@@ -42,6 +42,10 @@ what it *would* have posted.
 /review-requested-prs dry-run    # dry-run: prints what it would post, writes nothing
 ```
 
+Installed as a plugin, the skill is namespaced — invoke it as
+`/review-requested-prs:review-requested-prs` (append ` dry-run` for dry-run), or just pick it from
+the `/` menu.
+
 ## Requirements
 
 - [Claude Code](https://claude.com/claude-code)
@@ -50,10 +54,23 @@ what it *would* have posted.
 
 ## Install
 
-Clone (or copy) this repo into your Claude Code skills directory, under the skill's name:
+### As a plugin (recommended)
 
 ```
-git clone https://github.com/yoones/review-requested-prs ~/.claude/skills/review-requested-prs
+/plugin marketplace add yoones/review-requested-prs
+/plugin install review-requested-prs@yoones
+```
+
+Reload when prompted; the skill then appears in your `/` menu. Updates ship by re-running
+`/plugin marketplace update yoones`.
+
+### Manually
+
+Copy the skill directory into your Claude Code skills folder:
+
+```
+git clone https://github.com/yoones/review-requested-prs
+cp -r review-requested-prs/skills/review-requested-prs ~/.claude/skills/
 ```
 
 Claude Code loads `SKILL.md` and exposes it as `/review-requested-prs`.
